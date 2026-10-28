@@ -46,17 +46,18 @@
       console.error(error);
     }
   </script>
-  <script src="delivery.js" onerror="showFailure(new Error('无法下载资源加载器'))"></script>
-  <script src="index.js" onerror="showFailure(new Error('无法下载游戏引擎'))"></script>
+  <script src="fflate.c3b34f2e9f5e74d4.js"></script>
+  <script src="delivery.gzip.5a80aa05b9056929.js" onerror="showFailure(new Error('资源加载器下载失败'))"></script>
+  <script src="engine.c956d736955a8de5.js" onerror="showFailure(new Error('无法下载游戏引擎'))"></script>
   <script>
     try {
       if (typeof Engine !== 'function') throw new Error('游戏引擎尚未加载');
-      const config = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":72081612,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+      const config = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":64449180,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
       const engine = new Engine(config);
       engine.startGame({
         canvas: document.getElementById('canvas'),
         onProgress(current, total) {
-          if (total > 0) { progress.max = total; progress.value = current; }
+          if (!globalThis.FumoDownload && total > 0) { progress.max = total; progress.value = current; }
         },
         onPrint: (...args) => console.log(...args),
         onPrintError: (...args) => console.error(...args)

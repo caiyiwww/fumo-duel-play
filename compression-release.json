@@ -1,0 +1,12 @@
+{
+  "manifest": "delivery.dc29ed66bca3cd48.json",
+  "loader": "delivery.gzip.5a80aa05b9056929.js",
+  "engine": "engine.c956d736955a8de5.js",
+  "fallback": "fflate.c3b34f2e9f5e74d4.js",
+  "original_bytes": 111596366,
+  "exported_bytes": 103963934,
+  "download_bytes": 73502397,
+  "cold_total_bytes": 75035421,
+  "overhead_bytes": 1533024,
+  "reduction_percent": 34.14
+}

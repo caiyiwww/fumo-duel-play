@@ -1,0 +1,3 @@
+Fumo Trial Subset Regular is a modified subset of Source Han Sans CN Regular.
+Original glyph outlines are preserved. Subset and renamed for FUMO Duel browser trial, 2026-10-29.
+Distributed under SIL Open Font License 1.1, see FONT-LICENSE.txt.
