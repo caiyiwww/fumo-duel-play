@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f1eadb">
+  <meta name="description" content="挑选喜欢的 FUMO，来一场布偶对决。">
+  <title>FUMO 对决</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #f1eadb; }
+    body { color: #655447; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; }
+    #canvas { display: block; width: 100%; height: 100%; outline: none; touch-action: none; }
+    #loading { position: fixed; inset: 0; display: grid; align-content: center; justify-items: center; gap: 22px; padding: 28px; background: #f1eadb; z-index: 2; }
+    #loading[hidden] { display: none; }
+    #loading img { width: min(76vw, 450px); height: auto; image-rendering: pixelated; }
+    #loading p { margin: 0; text-align: center; line-height: 1.65; }
+    progress { width: min(64vw, 280px); height: 8px; appearance: none; border: 0; border-radius: 8px; overflow: hidden; background: #ded2bc; }
+    progress::-webkit-progress-bar { background: #ded2bc; }
+    progress::-webkit-progress-value { background: #ae5a50; }
+    progress::-moz-progress-bar { background: #ae5a50; }
+    #retry { border: 1px solid #985348; border-radius: 7px; color: #fff9ed; background: #ae5a50; padding: 12px 38px; font: inherit; cursor: pointer; }
+    #retry[hidden] { display: none; }
+  </style>
+  
+</head>
+<body>
+  <canvas id="canvas" tabindex="0" aria-label="FUMO 对决游戏画面">你的浏览器需要支持画布才能运行游戏。</canvas>
+  <div id="loading" role="status" aria-live="polite">
+    <img src="cover-logo.png" alt="FUMO 对决">
+    <p id="message">正在准备 FUMO……</p>
+    <progress id="progress" aria-label="游戏加载进度"></progress>
+    <button id="retry" type="button" hidden>重新加载</button>
+  </div>
+  <script>
+    const loading = document.getElementById('loading');
+    const message = document.getElementById('message');
+    const progress = document.getElementById('progress');
+    document.getElementById('retry').addEventListener('click', () => location.reload());
+    document.getElementById('canvas').addEventListener('contextmenu', event => event.preventDefault());
+    function showFailure(error) {
+      loading.hidden = false;
+      progress.hidden = true;
+      message.textContent = '游戏没有加载成功，请重新加载，或使用支持 WebGL 2 的新版浏览器。';
+      document.getElementById('retry').hidden = false;
+      console.error(error);
+    }
+  </script>
+  <script src="delivery.js" onerror="showFailure(new Error('无法下载资源加载器'))"></script>
+  <script src="index.js" onerror="showFailure(new Error('无法下载游戏引擎'))"></script>
+  <script>
+    try {
+      if (typeof Engine !== 'function') throw new Error('游戏引擎尚未加载');
+      const config = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":72081612,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+      const engine = new Engine(config);
+      engine.startGame({
+        canvas: document.getElementById('canvas'),
+        onProgress(current, total) {
+          if (total > 0) { progress.max = total; progress.value = current; }
+        },
+        onPrint: (...args) => console.log(...args),
+        onPrintError: (...args) => console.error(...args)
+      }).then(() => {
+        loading.hidden = true;
+        document.getElementById('canvas').focus();
+      }).catch(showFailure);
+    } catch (error) {
+      showFailure(error);
+    }
+  </script>
+</body>
+</html>
+

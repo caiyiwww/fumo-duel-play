@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "total_bytes": 111596366,
+  "files": {
+    "index.pck": {
+      "bytes": 72081612,
+      "sha256": "260cd527807db573d53c39dfc8af37361fe5371f7e6b5763b2af1f09b1247ade",
+      "parts": [
+        {
+          "path": "parts/index.pck.0.df8a93727f60.bin",
+          "bytes": 25165824,
+          "sha256": "df8a93727f60fbd989170a13ada1bb21edd5e50549408772efe8acebed2a6d89"
+        },
+        {
+          "path": "parts/index.pck.1.62928ee3d526.bin",
+          "bytes": 25165824,
+          "sha256": "62928ee3d52642021b93d9c99f59452b6ac63a4884f170df3b66a92128f62ca2"
+        },
+        {
+          "path": "parts/index.pck.2.576f9f06ba15.bin",
+          "bytes": 21749964,
+          "sha256": "576f9f06ba15c716d56a516ecc6723bc6cf498422cdf63f0b8c6abb00048c373"
+        }
+      ]
+    },
+    "index.wasm": {
+      "bytes": 39514754,
+      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
+      "parts": [
+        {
+          "path": "parts/index.wasm.0.139316b107d0.bin",
+          "bytes": 25165824,
+          "sha256": "139316b107d04842896c36bd4b34b7ef30c2f1adb5d45e8b71b11f449976003e"
+        },
+        {
+          "path": "parts/index.wasm.1.798b53b57b85.bin",
+          "bytes": 14348930,
+          "sha256": "798b53b57b854a77dbf43bfc91545836d0a00210c6d8f077bb19f7668a496c40"
+        }
+      ]
+    }
+  }
+}
