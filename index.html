@@ -2,10 +2,12 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
+  <meta name="fumo-release" content="2026.11.11">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#f1eadb">
   <meta name="description" content="挑选喜欢的 FUMO，来一场布偶对决。">
   <title>FUMO 对决</title>
+  <link rel="icon" type="image/png" href="./index.png">
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #f1eadb; }
@@ -27,7 +29,7 @@
 <body>
   <canvas id="canvas" tabindex="0" aria-label="FUMO 对决游戏画面">你的浏览器需要支持画布才能运行游戏。</canvas>
   <div id="loading" role="status" aria-live="polite">
-    <img src="cover-logo.png" alt="FUMO 对决">
+    <img src="cover-logo.697704adc71b399e.png" alt="FUMO 对决">
     <p id="message">正在准备 FUMO……</p>
     <progress id="progress" aria-label="游戏加载进度"></progress>
     <button id="retry" type="button" hidden>重新加载</button>
@@ -47,12 +49,12 @@
     }
   </script>
   <script src="fflate.c3b34f2e9f5e74d4.js"></script>
-  <script src="delivery.gzip.5a80aa05b9056929.js" onerror="showFailure(new Error('资源加载器下载失败'))"></script>
+  <script src="delivery.gzip.45b071f03095f6fb.js" onerror="showFailure(new Error('资源加载器下载失败'))"></script>
   <script src="engine.c956d736955a8de5.js" onerror="showFailure(new Error('无法下载游戏引擎'))"></script>
   <script>
     try {
       if (typeof Engine !== 'function') throw new Error('游戏引擎尚未加载');
-      const config = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":64449180,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+      const config = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":219883048,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
       const engine = new Engine(config);
       engine.startGame({
         canvas: document.getElementById('canvas'),
@@ -71,4 +73,5 @@
   </script>
 </body>
 </html>
+
 

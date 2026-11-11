@@ -1,7 +1,7 @@
 # FUMO 对决 · 在线试玩
 
-公开地址：https://caiyiwww.github.io/fumo-duel-play/
+https://caiyiwww.github.io/fumo-duel-play/
 
-本仓库仅包含网页试玩发行文件。字库已裁剪并重命名，图像与完整音乐、叫声保持。引擎和资源包使用 gzip 无损传输，浏览器还原原字节；保留上一版资源以兼容缓存页面。
+2026.11.11 版提供 48 位可选角色、经典单挑和最多 4 对 4 的自定义对决。魔法森林、红魔馆庭院、月球荒面和守矢风神台各有场地机制。
 
-音乐：Prologue / SAMURAI — YouFulca https://wingless-seraph.net/ 。字体与解压库许可证见 FONT-LICENSE.txt、FONT-SUBSET-NOTICE.txt、FFLATE-LICENSE.txt。
+本仓库包含网页发行文件。音乐、字体与解压库许可见随附文件。

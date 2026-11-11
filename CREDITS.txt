@@ -1,4 +1,15 @@
-FUMO 对决 · 在线试玩
-音乐：Prologue / SAMURAI — YouFulca
-https://wingless-seraph.net/
-字体：Source Han Sans / 思源黑体，SIL Open Font License 1.1，见 FONT-LICENSE.txt。
+Fusion Pixel 12px 简体中文由 TakWolf 等作者提供，采用 SIL Open Font License 1.1，许可见 assets/classic/fonts/Fusion-Pixel-OFL.txt；思源黑体 CN Medium 由 Adobe 提供，采用 SIL Open Font License 1.1，许可见 assets/classic/fonts/OFL.txt。
+
+FUMO 对决是东方 Project 二次创作游戏。东方原作及下列四首改编的原曲由 ZUN／上海爱丽丝幻乐团创作。
+东方二次创作指南 https://touhou-project.news/guideline/
+音乐及东方改编编曲 YouFulca（ユーフルカ） https://youfulca.com/
+音乐素材使用条款 https://youfulca.com/kiyaku_jp/
+
+Prologue https://youfulca.com/2022/08/11/prologue/
+Battle-SAMURAI https://youfulca.com/2022/08/14/battel_samurai-blade/
+献给逝去公主的七重奏 https://youfulca.com/2022/08/10/septet/
+U.N. Owen 就是她吗？ https://youfulca.com/2022/08/10/unowen/
+月时计 ～ Luna Dial https://youfulca.com/2022/08/10/luna-dial/
+幽雅地绽放吧，墨染的樱花 https://youfulca.com/2022/08/10/sumizome-sakura/
+
+FUMO 原创配乐沿用项目已有音源。
